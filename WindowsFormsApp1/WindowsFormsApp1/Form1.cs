@@ -17,5 +17,22 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void tbxDolar_Leave(object sender, EventArgs e)
+        {
+            //variavel
+            decimal resultado;
+
+            if(txbCota.Text != "" && txbDolar.Text != "")
+            {
+                resultado = Convert.ToDecimal(txbDolar.Text) * Convert.ToDecimal(txbDolar.Text);
+
+                lblReais.Text = resultado.ToString("C");
+            }
+            else
+            {
+                MessageBox.Show("digite algo");
+            }
+        }
     }
 }
